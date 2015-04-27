@@ -1,0 +1,36 @@
+// quiz10
+#include <iostream>
+using namespace std;
+
+int dotpoint (int primero[], int segundo[], int z)
+{
+	int dp=0;
+	for(int i=0; i<z; i++)
+	{
+		cout<<"ingrese los numeros"<<endl;
+		cin>>primero[i];	
+	}
+	for(int h=0; h<z; h++)
+	{
+		cout<<"ingresa otros numeros"<<endl;
+		cin>>segundo[h];
+	}
+	for(int k=0; k<z; k++)
+	{
+		dp=dp+(primero[k]*segundo[k]);
+	}
+	return dp;
+}
+
+int main ()
+{
+	int numeros;
+	cout<<"Cuantos numeros quieres agregar?"<<endl;
+	cin>>numeros;
+	int primero[numeros];
+	int segundo[numeros];
+	
+	int perro=dotpoint(primero, segundo, numeros);
+	cout<<"el resultado es "<<perro<<endl;
+	return 0;
+}
